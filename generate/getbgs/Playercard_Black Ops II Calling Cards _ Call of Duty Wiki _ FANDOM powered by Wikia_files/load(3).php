@@ -1,0 +1,3 @@
+#backtotop{border-right:none;float:right;margin-top:-1px}#backtotop button{height:20px}#BackToTopBtn div{border-radius:100%;bottom:3%;display:flex;height:50px;position:fixed;right:3%;text-align:center;width:50px;z-index:5000102;cursor:pointer}#BackToTopBtn div > svg{display:block;fill:currentColor;margin:auto;transform:scaleY(-1)}
+
+/* cache key: Callofduty:resourceloader:filter:minify-css:7:fd652aba045e6cb35813c5ab021bfa4e */

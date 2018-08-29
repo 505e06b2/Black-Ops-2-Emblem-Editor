@@ -1,0 +1,111 @@
+<html>
+	<head>
+		<title>Black Ops II Playercard</title>
+		<link rel="icon" type="image/png" href="icon.png">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/playercard.css">
+		<link rel="stylesheet" type="text/css" href="css/editor.css">
+		<script src="js/main.js"></script>
+		<script src="js/editor.js"></script>
+		<script src="js/emblems.js"></script>
+		<script src="js/base64.js"></script>
+		<script src="js/pako.min.js"></script>
+		<svg style="display: none">
+			<defs>
+				<filter id="filter-0"><feColorMatrix id="matrix-0" in="SourceGraphic" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" /></filter><filter id="filter-1"><feColorMatrix id="matrix-1" in="SourceGraphic" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" /></filter><filter id="filter-2"><feColorMatrix id="matrix-2" in="SourceGraphic" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" /></filter><filter id="filter-3"><feColorMatrix id="matrix-3" in="SourceGraphic" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" /></filter><filter id="filter-4"><feColorMatrix id="matrix-4" in="SourceGraphic" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" /></filter><filter id="filter-5"><feColorMatrix id="matrix-5" in="SourceGraphic" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" /></filter><filter id="filter-6"><feColorMatrix id="matrix-6" in="SourceGraphic" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" /></filter><filter id="filter-7"><feColorMatrix id="matrix-7" in="SourceGraphic" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" /></filter><filter id="filter-8"><feColorMatrix id="matrix-8" in="SourceGraphic" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" /></filter><filter id="filter-9"><feColorMatrix id="matrix-9" in="SourceGraphic" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" /></filter><filter id="filter-10"><feColorMatrix id="matrix-10" in="SourceGraphic" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" /></filter><filter id="filter-11"><feColorMatrix id="matrix-11" in="SourceGraphic" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" /></filter><filter id="filter-12"><feColorMatrix id="matrix-12" in="SourceGraphic" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" /></filter><filter id="filter-13"><feColorMatrix id="matrix-13" in="SourceGraphic" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" /></filter><filter id="filter-14"><feColorMatrix id="matrix-14" in="SourceGraphic" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" /></filter><filter id="filter-15"><feColorMatrix id="matrix-15" in="SourceGraphic" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" /></filter><filter id="filter-16"><feColorMatrix id="matrix-16" in="SourceGraphic" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" /></filter><filter id="filter-17"><feColorMatrix id="matrix-17" in="SourceGraphic" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" /></filter><filter id="filter-18"><feColorMatrix id="matrix-18" in="SourceGraphic" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" /></filter><filter id="filter-19"><feColorMatrix id="matrix-19" in="SourceGraphic" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" /></filter><filter id="filter-20"><feColorMatrix id="matrix-20" in="SourceGraphic" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" /></filter><filter id="filter-21"><feColorMatrix id="matrix-21" in="SourceGraphic" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" /></filter><filter id="filter-22"><feColorMatrix id="matrix-22" in="SourceGraphic" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" /></filter><filter id="filter-23"><feColorMatrix id="matrix-23" in="SourceGraphic" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" /></filter><filter id="filter-24"><feColorMatrix id="matrix-24" in="SourceGraphic" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" /></filter><filter id="filter-25"><feColorMatrix id="matrix-25" in="SourceGraphic" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" /></filter><filter id="filter-26"><feColorMatrix id="matrix-26" in="SourceGraphic" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" /></filter><filter id="filter-27"><feColorMatrix id="matrix-27" in="SourceGraphic" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" /></filter><filter id="filter-28"><feColorMatrix id="matrix-28" in="SourceGraphic" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" /></filter><filter id="filter-29"><feColorMatrix id="matrix-29" in="SourceGraphic" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" /></filter><filter id="filter-30"><feColorMatrix id="matrix-30" in="SourceGraphic" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" /></filter><filter id="filter-31"><feColorMatrix id="matrix-31" in="SourceGraphic" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" /></filter>
+			</defs>
+		</svg>
+	</head>
+	<body>
+		<div id="frame" class="body">
+			<span id="playercard" style="visibility: hidden">
+				<div class="table">
+					<div class="left">
+						<img id="bigemblem" src="img/blank.png" onclick="document.getElementById('playercard').style.visibility = 'hidden'; document.getElementById('editor').style.visibility = 'visible';">
+						<div class="assembled">
+							<img id="playercard-bg" onclick="alterbg()" onerror="this.src = 'backgrounds/Hexed.png'" src="backgrounds/Hexed.png">
+							<img id="smallemblem" src="img/blank.png" onclick="document.getElementById('playercard').style.visibility = 'hidden'; document.getElementById('editor').style.visibility = 'visible';">
+							<div id="playername" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" oninput="details.playername = this.innerText"></div>
+							<div id="playerclantag" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" oninput="details.playerclantag = this.innerText"></div>
+						</div>
+					</div>
+					<img style="position: absolute; left: 272px; top: 100px; width: 142px;" src="icon.png">
+				</div>
+				
+				<div class="button" style="left: 355px; top: 490px; padding: 5px;" onclick="savedata();">SAVE</div>
+				<div class="button" style="right: 351px; top: 490px; padding: 5px;" onclick="loaddata();">LOAD</div>
+				<textarea id="datatext" placeholder="Paste emblem data here for loading, or copy emblem data that's been saved" style="top: 550px; left: 305px; width: 418px; height: 150px; resize: none;"></textarea>
+			</span>
+			
+			<span id="editor" style="visibility: hidden">
+				<canvas id="canvas" width="300" height="300" style="border: 2px solid #555"></canvas>
+				<span id="status" style="position: absolute; top: 50px; left: 54px; font-size: 33px">EDIT EMBLEM</span>
+				<span id="usedlayers" style="position: absolute; top: 110px; right: 54px; font-size: 20px; display: none">Layers Used: <span id="usedlayers-num">0</span>/32</span>
+			
+				<div id="previews" style="position: absolute; height: 148px; width:100%; top: 506px; left: 0px; overflow-x: scroll; overflow-y: hidden; visibility: hidden" class="main">
+					<div id="preview-contain" style="position: relative; left: 150px; height: 100%; width: 5800px">
+						<div id="layer-0" class="layer-preview" onclick="editor.selectpreview(0)"><img id="layer-img-0" style="filter: url(#filter-0)" src="img/empty.png"><div class="layername">Layer 1</div></div><div id="layer-1" class="layer-preview" onclick="editor.selectpreview(1)"><img id="layer-img-1" style="filter: url(#filter-1)" src="img/empty.png"><div class="layername">Layer 2</div></div><div id="layer-2" class="layer-preview" onclick="editor.selectpreview(2)"><img id="layer-img-2" style="filter: url(#filter-2)" src="img/empty.png"><div class="layername">Layer 3</div></div><div id="layer-3" class="layer-preview" onclick="editor.selectpreview(3)"><img id="layer-img-3" style="filter: url(#filter-3)" src="img/empty.png"><div class="layername">Layer 4</div></div><div id="layer-4" class="layer-preview" onclick="editor.selectpreview(4)"><img id="layer-img-4" style="filter: url(#filter-4)" src="img/empty.png"><div class="layername">Layer 5</div></div><div id="layer-5" class="layer-preview" onclick="editor.selectpreview(5)"><img id="layer-img-5" style="filter: url(#filter-5)" src="img/empty.png"><div class="layername">Layer 6</div></div><div id="layer-6" class="layer-preview" onclick="editor.selectpreview(6)"><img id="layer-img-6" style="filter: url(#filter-6)" src="img/empty.png"><div class="layername">Layer 7</div></div><div id="layer-7" class="layer-preview" onclick="editor.selectpreview(7)"><img id="layer-img-7" style="filter: url(#filter-7)" src="img/empty.png"><div class="layername">Layer 8</div></div><div id="layer-8" class="layer-preview" onclick="editor.selectpreview(8)"><img id="layer-img-8" style="filter: url(#filter-8)" src="img/empty.png"><div class="layername">Layer 9</div></div><div id="layer-9" class="layer-preview" onclick="editor.selectpreview(9)"><img id="layer-img-9" style="filter: url(#filter-9)" src="img/empty.png"><div class="layername">Layer 10</div></div><div id="layer-10" class="layer-preview" onclick="editor.selectpreview(10)"><img id="layer-img-10" style="filter: url(#filter-10)" src="img/empty.png"><div class="layername">Layer 11</div></div><div id="layer-11" class="layer-preview" onclick="editor.selectpreview(11)"><img id="layer-img-11" style="filter: url(#filter-11)" src="img/empty.png"><div class="layername">Layer 12</div></div><div id="layer-12" class="layer-preview" onclick="editor.selectpreview(12)"><img id="layer-img-12" style="filter: url(#filter-12)" src="img/empty.png"><div class="layername">Layer 13</div></div><div id="layer-13" class="layer-preview" onclick="editor.selectpreview(13)"><img id="layer-img-13" style="filter: url(#filter-13)" src="img/empty.png"><div class="layername">Layer 14</div></div><div id="layer-14" class="layer-preview" onclick="editor.selectpreview(14)"><img id="layer-img-14" style="filter: url(#filter-14)" src="img/empty.png"><div class="layername">Layer 15</div></div><div id="layer-15" class="layer-preview" onclick="editor.selectpreview(15)"><img id="layer-img-15" style="filter: url(#filter-15)" src="img/empty.png"><div class="layername">Layer 16</div></div><div id="layer-16" class="layer-preview" onclick="editor.selectpreview(16)"><img id="layer-img-16" style="filter: url(#filter-16)" src="img/empty.png"><div class="layername">Layer 17</div></div><div id="layer-17" class="layer-preview" onclick="editor.selectpreview(17)"><img id="layer-img-17" style="filter: url(#filter-17)" src="img/empty.png"><div class="layername">Layer 18</div></div><div id="layer-18" class="layer-preview" onclick="editor.selectpreview(18)"><img id="layer-img-18" style="filter: url(#filter-18)" src="img/empty.png"><div class="layername">Layer 19</div></div><div id="layer-19" class="layer-preview" onclick="editor.selectpreview(19)"><img id="layer-img-19" style="filter: url(#filter-19)" src="img/empty.png"><div class="layername">Layer 20</div></div><div id="layer-20" class="layer-preview" onclick="editor.selectpreview(20)"><img id="layer-img-20" style="filter: url(#filter-20)" src="img/empty.png"><div class="layername">Layer 21</div></div><div id="layer-21" class="layer-preview" onclick="editor.selectpreview(21)"><img id="layer-img-21" style="filter: url(#filter-21)" src="img/empty.png"><div class="layername">Layer 22</div></div><div id="layer-22" class="layer-preview" onclick="editor.selectpreview(22)"><img id="layer-img-22" style="filter: url(#filter-22)" src="img/empty.png"><div class="layername">Layer 23</div></div><div id="layer-23" class="layer-preview" onclick="editor.selectpreview(23)"><img id="layer-img-23" style="filter: url(#filter-23)" src="img/empty.png"><div class="layername">Layer 24</div></div><div id="layer-24" class="layer-preview" onclick="editor.selectpreview(24)"><img id="layer-img-24" style="filter: url(#filter-24)" src="img/empty.png"><div class="layername">Layer 25</div></div><div id="layer-25" class="layer-preview" onclick="editor.selectpreview(25)"><img id="layer-img-25" style="filter: url(#filter-25)" src="img/empty.png"><div class="layername">Layer 26</div></div><div id="layer-26" class="layer-preview" onclick="editor.selectpreview(26)"><img id="layer-img-26" style="filter: url(#filter-26)" src="img/empty.png"><div class="layername">Layer 27</div></div><div id="layer-27" class="layer-preview" onclick="editor.selectpreview(27)"><img id="layer-img-27" style="filter: url(#filter-27)" src="img/empty.png"><div class="layername">Layer 28</div></div><div id="layer-28" class="layer-preview" onclick="editor.selectpreview(28)"><img id="layer-img-28" style="filter: url(#filter-28)" src="img/empty.png"><div class="layername">Layer 29</div></div><div id="layer-29" class="layer-preview" onclick="editor.selectpreview(29)"><img id="layer-img-29" style="filter: url(#filter-29)" src="img/empty.png"><div class="layername">Layer 30</div></div><div id="layer-30" class="layer-preview" onclick="editor.selectpreview(30)"><img id="layer-img-30" style="filter: url(#filter-30)" src="img/empty.png"><div class="layername">Layer 31</div></div><div id="layer-31" class="layer-preview" onclick="editor.selectpreview(31)"><img id="layer-img-31" style="filter: url(#filter-31)" src="img/empty.png"><div class="layername">Layer 32</div></div>
+					</div>
+				</div>
+				
+				<span id="picker" style="display: none">
+					<img id="littleicon" style="position: absolute; top: 452px; left: 54px; height: 70px">
+					<span id="nametext" style="position: absolute; top: 550px; left: 54px; font-size: 28px">None</span>
+					<div id="icons">
+						<table class="tabs">
+							<tr>
+								<td onclick="editor.changetab('emblems')"><span class="deselected" id="tab-emblems">EMBLEMS</span></td>
+								<td onclick="editor.changetab('gear')"><span class="deselected" id="tab-gear">GEAR</span></td>
+								<td onclick="editor.changetab('ranks')"><span class="deselected" id="tab-ranks">RANKS</span></td>
+								<td onclick="editor.changetab('tools')"><span class="deselected" id="tab-tools">TOOLS</span></td>
+								<td onclick="editor.changetab('type')"><span class="deselected" id="tab-type">TYPE</span></td>
+							</tr>
+						</table>
+						<div id="emblems" class="container" style="display:none"></div>
+						<div id="gear" class="container" style="display:none"></div>
+						<div id="type" class="container" style="display:none"></div>
+						<div id="tools" class="container" style="display:none"></div>
+						<div id="ranks" class="container" style="display:none"></div>
+					</div>
+				</span>
+			
+				<span id="layer" style="display: none">
+					<div style="position: absolute; height: 300px; width: 380px; top: 110px; left: 380px; font-size: 20px">
+						<span style="font-size: 25px">Colours</span><br>
+						<table class="coloursliders">
+							<tr><td>Hue</td> <td><input id="slider-hue" min="0" max="1" step="0.01" type="range" onchange="editor.stack[editor.stacki].hue = this.value; editor.sliderbgchange()" style="-webkit-appearance: none; background: linear-gradient(to right, #f00, #ff8000, #ff0, #80ff00, #0f0, #00ff80, #0ff, #007fff, #00f, #7f00ff, #f0f, #ff0080, #f00)"></td></tr>
+							<tr><td>Saturation</td> <td><input id="slider-saturation" min="0" max="1" step="0.01" type="range" onchange="editor.stack[editor.stacki].saturation = this.value; editor.sliderbgchange()" style="-webkit-appearance: none; background: linear-gradient(to right, rgba(255,255,255,1), hsl(0, 100%, 50%))"></td></tr>
+							<tr><td>Brightness</td> <td><input id="slider-brightness" min="0" max="1" step="0.01" type="range" onchange="editor.stack[editor.stacki].brightness = this.value; editor.sliderbgchange()" style="-webkit-appearance: none; background: linear-gradient(to right, rgba(0,0,0,1), rgba(255,255,255,1))"></td></tr>
+							<tr><td>Opacity</td> <td><input id="slider-alpha" min="0" max="1" step="0.01" type="range" onchange="editor.stack[editor.stacki].alpha = this.value; editor.sliderbgchange()" style="-webkit-appearance: none; background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1))"></td></tr>
+						</table>
+						<span style="font-size: 25px">Controls</span><br>
+						<span class="controls" style="font-size: 15px">
+							Drag <img src="img/mouseicons/mousebuttonleft.png"> to move the emblem<br>
+							Drag <img src="img/mouseicons/mousebuttonright.png"> to rotate the emblem<br>
+							Drag <img src="img/mouseicons/mousebuttonleft.png"> + <img src="img/mouseicons/mousebuttonright.png"> to change the scale of the emblem<br>
+							<img src="img/mouseicons/mousewheelup.png"> for fixed scaling<br>
+							<span class="controls-highlight">A</span> Move layer down / <span class="controls-highlight">D</span> Move layer up<br>
+							<span class="controls-highlight">F</span> Flip<br>
+						</span>
+					</div>
+					<div style="position: absolute; top: 260px; left: 675px; border: 2px solid #555"><input id="colourbox" type="text" style="width: 80px; background: transparent; color: #ccc; border: none" onkeyup="editor.colourboxchanged(this.value);" value="#FFFFFFFF"></div>
+				</span>
+				
+				<span id="main">
+					<div id="clipboard" style="display: none; position: absolute; top: 300px; left: 384px">
+						Clipboard<br>
+						<div style="border: 2px solid #555; height: 64px; width: 64px; padding: 2px;"><img id="clipboard-img" style="height: 100%" src=""></div>
+						<span class="hover" onclick="editor.keyfuncs({key: 'v'})"><span class="controls-highlight">V</span> Paste</span>
+					</div>
+				</span>
+				
+				<div id="prompt-left" style="position: absolute; bottom: 35px; left: 35px"></div>
+				<div id="prompt-right" style="position: absolute; bottom: 35px; right: 35px"></div>
+			</span>
+		<div>
+		<div id="spinner" style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%)">
+			<img src="img/spinner.svg">
+			<div>Emblems loaded: <span id="emblemcount">0</span> / 261</div>
+		</div>
+	</body>
+</html>

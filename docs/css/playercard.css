@@ -1,0 +1,73 @@
+#playercard .table {
+	position: absolute;
+	top: 120px;
+	left: 305px;
+	width: 414px;
+	height: 340px;
+	border: 2px solid #555;
+}
+
+#playercard .button {
+	border: 2px solid #555;
+	position: absolute;
+}
+
+#playercard .button:hover {
+	cursor: pointer;
+}
+
+#bigemblem {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width:100%;
+}
+
+#bigemblem:hover, #smallemblem:hover, #playercard-bg {
+	cursor: pointer;
+}
+
+#playername {
+	position: absolute;
+	left: 69px;
+	top: 16px;
+}
+
+#playerclantag {
+	position: absolute;
+	left: 69px;
+	top: 37px;
+}
+
+#playercard-bg {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+}
+
+#playercard .table .left {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 272px;
+	height: 100%;
+	padding-right: 1px;
+	border-right: 2px solid #555;
+}
+
+#playercard .assembled {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 68px;
+}
+
+#smallemblem {
+	position: absolute;
+	top: 5px;
+	left: 6px;
+	height: 58px;
+	width: 58px;
+}

@@ -1,0 +1,170 @@
+canvas {
+	position: absolute;
+	top: 110px;
+	left: 54px;
+	height: 300px;
+	width: 300px;
+	image-rendering: -moz-crisp-edges; 
+	image-rendering: -webkit-optimize-contrast;
+	image-rendering: -o-crisp-edges;
+	image-rendering: crisp-edges;
+	-ms-interpolation-mode: nearest-neighbor;
+	background-size: 152px 152px, 152px 152px, 31px 31px, 31px 31px;
+	background-position: -2px -2px, -2px -2px, 0px 0px, 0px 0px;
+}
+
+#icons {
+	position: absolute;
+	top: 107px;
+	left: 396px;
+	width: 580px;
+	height: 560px;
+	overflow: visible;
+}
+
+#icons img {
+	width: 75px;
+	height: 75px;
+	padding: 13px;
+	margin: 3px;
+	border: 2px solid #555;
+}
+
+#icons img:hover {
+	border: 2px solid #ff8000;
+	cursor: pointer;
+}
+
+#icons .container {
+	overflow-y: scroll;
+	overflow-x: hidden;
+	max-height: 555px;
+}
+
+#icons .tabs {
+	height: 25px;
+	overflow: hidden;
+}
+
+#editor table {
+	width: 100%;
+	table-layout: fixed;
+	text-align: center;
+}
+
+#icons .tabs td {
+	font-weight: bold;
+	font-size: 18px;
+}
+
+#icons .tabs span {
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+#icons .tabs td:hover {
+	cursor: pointer;
+}
+
+#icons .tabs .selected {
+	background: #000;
+	color: #fff;
+}
+
+#icons .tabs .deselected {
+	color: #888;
+	transition:.2s;
+}
+
+#icons .tabs .deselected:hover {
+	color: #fff;
+}
+
+.controls-highlight {
+	color: #e1ad33;
+}
+
+.hover:hover {
+	cursor: pointer;
+}
+
+.hover:hover .controls-highlight {
+	color: #ff8000;
+}
+
+.previews-layer .layer-preview {
+	opacity: 0.3;
+}
+
+.previews-layer .selected {
+	opacity: 1;
+	border-color: #555;
+}
+
+.previews-main .selected {
+	border-color: #ff8000;
+}
+
+#previews .selected .layername {
+	color: #ff8000;
+}
+
+#previews .selected img {
+	padding: 15px;
+}
+
+#previews .selected {
+	height: 120px;
+	width: 148px;
+}
+
+.layer-preview {
+	position: relative;
+	display: inline-block;
+	border: 2px solid #555;
+	width: 128px;
+	height: 100px;
+	text-align: center;
+	margin-left: 5px;
+	margin-right: 5px;
+	transition: height .2s;
+	
+}
+
+.layer-preview:hover {
+	cursor: pointer;
+}
+
+.layer-preview img {
+	padding: 6px;
+	width: 64px;
+	height: 64px;
+}
+
+.layer-preview .layername {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background: black;
+}
+
+.coloursliders {
+	text-align: left;
+}
+
+.coloursliders td:first-child {
+	width: 65px;
+}
+
+.coloursliders input {
+	width: 100%;
+}
+
+.controls img {
+	height: 17px;
+	width: 13px;
+	image-rendering: pixelated;
+}
