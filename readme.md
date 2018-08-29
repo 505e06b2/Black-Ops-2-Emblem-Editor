@@ -1,3 +1,5 @@
+# [===> View it here](https://505e06b2.github.io/Black-Ops-2-Emblem-Editor/)
+
 To use this, you need to be running a local server; this is due to the security settings of the canvas  
 If you don't, the browser will consider the canvas tainted
 
