@@ -41,6 +41,7 @@ for folder in ["custom", "dlc", "general", "game modes", "prestige", "weapons"]:
     os.chdir(folder)
     for x, y, f in os.walk("."):
         for x in f:
+            print x
             html += '<img src="' + folder + '/' + x + '">'
     os.chdir("..")
 
