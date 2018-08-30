@@ -19,7 +19,11 @@ window.onload = function() {
 }
 
 function alterbg() {
-	if(confirm("View list of playercards hosted on this site in a new tab?")) window.open("backgrounds/", "_blank");
+	if(confirm("View list of playercards hosted on this site in a new tab?")) {
+		window.open("backgrounds/", "_blank");
+		return;
+	}
+	
 	const input = prompt("Enter URL for background image: (256x64)");
 	if(input) {
 		details.playerbg = input;
