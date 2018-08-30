@@ -300,6 +300,8 @@ function editorClass() {
 					case "x":
 						if(self.stack[self.stacki] && confirm("Clear Layer?")) {
 							document.getElementById("layer-img-" + self.stacki).src = "img/empty.png";
+							self.clipboard = null;
+							document.getElementById("clipboard").style.display = "none";
 							self.createfilter(0, 0, 1, 1);
 							self.stack[self.stacki] = null;
 							self.getusedlayers();
