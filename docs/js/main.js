@@ -19,7 +19,7 @@ window.onload = function() {
 }
 
 function alterbg() {
-	if(confirm("Open the wikia to view all playercards?")) window.open("http://callofduty.wikia.com/wiki/Playercard/Black_Ops_II_Calling_Cards");
+	if(confirm("View list of playercards hosted on this site in a new tab?")) window.open("backgrounds/", "_blank");
 	const input = prompt("Enter URL for background image: (256x64)");
 	if(input) {
 		details.playerbg = input;
