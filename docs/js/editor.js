@@ -116,7 +116,7 @@ function editorClass() {
 			}
 			document.getElementById("previews").style.visibility = "hidden";
 			document.getElementById("usedlayers").style.display = "none";
-			document.getElementById("prompt-left").innerHTML = '<span class="hover" onclick="editor.keyfuncs({key: \'escape\'})"><span class="controls-highlight">ESC</span> Back</span>';
+			document.getElementById("prompt-left").innerHTML = '<span class="hover" onclick="editor.keyfuncs({key: \'escape\', override: true})"><span class="controls-highlight">ESC</span> Back</span>';
 			document.getElementById("prompt-right").innerHTML = '';
 		} else {
 			self.getusedlayers();
@@ -137,7 +137,7 @@ function editorClass() {
 			self.canvas.style.borderColor = "#ff8000";
 			self.canvas.style.backgroundImage = "linear-gradient(rgba(255, 255, 255, 0.4) 2px, transparent 2px), linear-gradient(90deg, rgba(255, 255, 255, 0.4) 2px, transparent 2px), linear-gradient(rgba(255, 255, 255, 0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.3) 1px, transparent 1px)";
 			self.reloadsliders();
-			document.getElementById("prompt-left").innerHTML = '<span class="hover" onclick="editor.keyfuncs({key: \'enter\'})"><span class="controls-highlight">ENTER</span> Confirm</span> &nbsp; <span class="hover" onclick="editor.keyfuncs({key: \'escape\'})"><span class="controls-highlight">ESC</span> Back</span>';
+			document.getElementById("prompt-left").innerHTML = '<span class="hover" onclick="editor.keyfuncs({key: \'enter\'})"><span class="controls-highlight">ENTER</span> Confirm</span> &nbsp; <span class="hover" onclick="editor.keyfuncs({key: \'escape\', override: true})"><span class="controls-highlight">ESC</span> Back</span>';
 			document.getElementById("prompt-right").innerHTML = '<span class="hover" onclick="editor.keyfuncs({key: \'u\'})"><span class="controls-highlight">U</span> Undo changes</span>';
 			document.getElementById("previews").className = "previews-layer";
 		} else {
@@ -221,10 +221,10 @@ function editorClass() {
 		document.getElementById("previews").scrollLeft = newpreview.offsetLeft;
 		if(self.mode === "main") {
 			if(self.stack[self.stacki]) {
-				document.getElementById("prompt-left").innerHTML = '<span class="hover" onclick="editor.keyfuncs({key: \'enter\'})"><span class="controls-highlight">ENTER</span> Edit Layer</span> &nbsp; <span class="hover" onclick="editor.keyfuncs({key: \'escape\'})"><span class="controls-highlight">ESC</span> Back</span>';
+				document.getElementById("prompt-left").innerHTML = '<span class="hover" onclick="editor.keyfuncs({key: \'enter\'})"><span class="controls-highlight">ENTER</span> Edit Layer</span> &nbsp; <span class="hover" onclick="editor.keyfuncs({key: \'escape\', override: true})"><span class="controls-highlight">ESC</span> Back</span>';
 				document.getElementById("prompt-right").innerHTML = '<span class="hover" onclick="editor.keyfuncs({key: \'c\'})"><span class="controls-highlight">C</span> Copy</span> &nbsp; <span class="hover" onclick="editor.keyfuncs({key: \'x\'})"><span class="controls-highlight">X</span> Clear Layer</span> &nbsp; <span class="hover" onclick="editor.keyfuncs({key: \'e\'})"><span class="controls-highlight">E</span> Change Emblem</span>';
 			} else {
-				document.getElementById("prompt-left").innerHTML = '<span class="hover" onclick="editor.keyfuncs({key: \'enter\'})"><span class="controls-highlight">ENTER</span> Choose emblem</span> &nbsp; <span class="hover" onclick="editor.keyfuncs({key: \'escape\'})"><span class="controls-highlight">ESC</span> Back</span>';
+				document.getElementById("prompt-left").innerHTML = '<span class="hover" onclick="editor.keyfuncs({key: \'enter\'})"><span class="controls-highlight">ENTER</span> Choose emblem</span> &nbsp; <span class="hover" onclick="editor.keyfuncs({key: \'escape\', override: true})"><span class="controls-highlight">ESC</span> Back</span>';
 				document.getElementById("prompt-right").innerHTML = '';
 			}
 		}
@@ -253,7 +253,7 @@ function editorClass() {
 			case "picker":
 				switch(key) {
 					case "escape": {
-						if(self.stackbackup) {
+						if(e.override && self.stackbackup) {
 							self.stack[self.stacki].name = self.stackbackup.name;
 							self.stack[self.stacki].img = self.stackbackup.img;
 							self.stack[self.stacki].canvas = self.stackbackup.canvas;
@@ -321,7 +321,7 @@ function editorClass() {
 						document.getElementById("clipboard").style.display = "";
 						break;
 					case "escape":
-						updateimgs(function() {document.getElementById('editor').style.visibility = 'hidden'; document.getElementById('playercard').style.visibility = 'visible';});
+						if(e.override) updateimgs(function() {document.getElementById('editor').style.visibility = 'hidden'; document.getElementById('playercard').style.visibility = 'visible';});
 						break;
 					case "v": {
 						if(self.clipboard === null || self.stacki === self.clipboard) return;
@@ -343,7 +343,7 @@ function editorClass() {
 	
 	document.oncontextmenu = (function(e) {e.preventDefault()});
 	document.onkeypress = self.keyfuncs;
-	document.onkeydown = (function(e) {if(e.key === "Escape" || e.key === "Esc") self.keyfuncs({key: "escape"});});
+	document.onkeydown = (function(e) {if(e.key === "Escape") self.keyfuncs({key: "escape", override: true});}); //for Chrome, but Firefox will trigger this too...
 	self.canvas = document.getElementById("canvas");
 	self.canvas.buttons = {};
 	self.ctx = self.canvas.getContext("2d");

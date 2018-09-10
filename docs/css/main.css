@@ -10,9 +10,8 @@ body {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-image: url("../img/background.png");
-	background-position: center;
+
 	font-family: 'Agency FB', arial;
-	font-weight: bold;
 	font-size: 18px;
 	color: #fff;
 	overflow: hidden;
