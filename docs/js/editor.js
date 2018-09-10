@@ -213,21 +213,23 @@ function editorClass() {
 		} else self.changestacki(id);
 	}
 	
+	self.selectedemblemchange = function() {
+		if(self.stack[self.stacki]) {
+			document.getElementById("prompt-left").innerHTML = '<span class="hover" onclick="editor.keyfuncs({key: \'enter\'})"><span class="controls-highlight">ENTER</span> Edit Layer</span> &nbsp; <span class="hover" onclick="editor.keyfuncs({key: \'escape\', override: true})"><span class="controls-highlight">ESC</span> Back</span>';
+			document.getElementById("prompt-right").innerHTML = '<span class="hover" onclick="editor.keyfuncs({key: \'c\'})"><span class="controls-highlight">C</span> Copy</span> &nbsp; <span class="hover" onclick="editor.keyfuncs({key: \'x\'})"><span class="controls-highlight">X</span> Clear Layer</span> &nbsp; <span class="hover" onclick="editor.keyfuncs({key: \'e\'})"><span class="controls-highlight">E</span> Change Emblem</span>';
+		} else {
+			document.getElementById("prompt-left").innerHTML = '<span class="hover" onclick="editor.keyfuncs({key: \'enter\'})"><span class="controls-highlight">ENTER</span> Choose emblem</span> &nbsp; <span class="hover" onclick="editor.keyfuncs({key: \'escape\', override: true})"><span class="controls-highlight">ESC</span> Back</span>';
+			document.getElementById("prompt-right").innerHTML = '';
+		}
+	}
+	
 	self.changestacki = function(index) {
 		document.getElementById("layer-" + self.stacki).className = "layer-preview";
 		self.stacki = index;
 		const newpreview = document.getElementById("layer-" + self.stacki);
 		newpreview.className = "layer-preview selected";
 		document.getElementById("previews").scrollLeft = newpreview.offsetLeft;
-		if(self.mode === "main") {
-			if(self.stack[self.stacki]) {
-				document.getElementById("prompt-left").innerHTML = '<span class="hover" onclick="editor.keyfuncs({key: \'enter\'})"><span class="controls-highlight">ENTER</span> Edit Layer</span> &nbsp; <span class="hover" onclick="editor.keyfuncs({key: \'escape\', override: true})"><span class="controls-highlight">ESC</span> Back</span>';
-				document.getElementById("prompt-right").innerHTML = '<span class="hover" onclick="editor.keyfuncs({key: \'c\'})"><span class="controls-highlight">C</span> Copy</span> &nbsp; <span class="hover" onclick="editor.keyfuncs({key: \'x\'})"><span class="controls-highlight">X</span> Clear Layer</span> &nbsp; <span class="hover" onclick="editor.keyfuncs({key: \'e\'})"><span class="controls-highlight">E</span> Change Emblem</span>';
-			} else {
-				document.getElementById("prompt-left").innerHTML = '<span class="hover" onclick="editor.keyfuncs({key: \'enter\'})"><span class="controls-highlight">ENTER</span> Choose emblem</span> &nbsp; <span class="hover" onclick="editor.keyfuncs({key: \'escape\', override: true})"><span class="controls-highlight">ESC</span> Back</span>';
-				document.getElementById("prompt-right").innerHTML = '';
-			}
-		}
+		if(self.mode === "main") self.selectedemblemchange();
 	}
 	
 	self.movelayer = function(index) {
@@ -305,7 +307,7 @@ function editorClass() {
 							self.createfilter(0, 0, 1, 1);
 							self.stack[self.stacki] = null;
 							self.getusedlayers();
-							self.changestacki(self.stacki);
+							self.selectedemblemchange();
 							self.draw();
 						}
 						break;
@@ -331,7 +333,7 @@ function editorClass() {
 						document.getElementById("matrix-" + self.stacki).setAttribute("values", document.getElementById("matrix-" + self.clipboard).getAttribute("values"));
 						
 						self.generatestackcanvas();
-						
+						self.selectedemblemchange();
 						self.getusedlayers();
 						self.draw();
 						break;
